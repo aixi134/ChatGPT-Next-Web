@@ -296,7 +296,10 @@ export function getHeaders(ignoreHeaders: boolean = false) {
       ? "x-goog-api-key"
       : "Authorization";
   }
-
+  function getLocalUser(): string{
+    const userid = localStorage.getItem("userid");
+    return userid ? userid: "anonymous"
+  }
   const {
     isGoogle,
     isAzure,
@@ -322,7 +325,7 @@ export function getHeaders(ignoreHeaders: boolean = false) {
       ACCESS_CODE_PREFIX + accessStore.accessCode,
     );
   }
-
+  headers["X-BUAI-KEY"] = getLocalUser();
   return headers;
 }
 
