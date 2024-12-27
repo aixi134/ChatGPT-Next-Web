@@ -115,12 +115,13 @@ export function AuthPage() {
           type="primary"
           onClick={goChat}
         />
-        <IconButton
+{/*        <IconButton
+
           text={Locale.Auth.SaasTips}
           onClick={() => {
             goSaas();
           }}
-        />
+        />*/}
       </div>
     </div>
   );
