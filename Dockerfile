@@ -35,6 +35,7 @@ ENV OPENAI_API_KEY=""
 ENV GOOGLE_API_KEY=""
 ENV CODE=""
 ENV BASE_URL=""
+ENV hideUserApiKey=true
 
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
