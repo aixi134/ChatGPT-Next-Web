@@ -34,6 +34,7 @@ ENV PROXY_URL=""
 ENV OPENAI_API_KEY=""
 ENV GOOGLE_API_KEY=""
 ENV CODE=""
+ENV BASE_URL=""
 
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
